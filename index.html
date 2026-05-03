@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Arslan Tariq – Senior Data Engineer</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.6;font-size:14px}
+a{color:#58a6ff;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* NAV */
+nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:sticky;top:0;z-index:100}
+.nav-inner{display:flex;align-items:center;gap:20px}
+.nav-logo{font-size:22px;color:#fff;font-weight:600;display:flex;align-items:center;gap:8px}
+.nav-logo svg{fill:#fff}
+.nav-links{display:flex;gap:4px;margin-left:auto}
+.nav-links a{color:#e6edf3;font-size:13px;padding:6px 12px;border-radius:6px;transition:background .15s}
+.nav-links a:hover{background:#30363d;text-decoration:none}
+
+/* HERO */
+.hero{padding:48px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:start}
+.avatar{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,#1f6feb,#388bfd);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;color:#fff;flex-shrink:0;border:3px solid #30363d}
+.hero-info h1{font-size:26px;font-weight:600;color:#e6edf3;margin-bottom:4px}
+.hero-info .title{color:#8b949e;font-size:15px;margin-bottom:12px}
+.hero-bio{color:#c9d1d9;font-size:13.5px;line-height:1.65;max-width:640px;margin-bottom:16px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:16px}
+.meta-item{display:flex;align-items:center;gap:6px;color:#8b949e;font-size:13px}
+.meta-item svg{fill:#8b949e;flex-shrink:0}
+.badge-row{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.badge{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55;padding:3px 10px;border-radius:20px;font-size:12px}
+.badge.green{background:#23863622;color:#3fb950;border-color:#23863655}
+
+/* LAYOUT */
+.main-grid{display:grid;grid-template-columns:260px 1fr;gap:24px;padding-bottom:48px}
+
+/* SIDEBAR */
+.sidebar{}
+.sidebar-section{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin-bottom:16px}
+.sidebar-section h3{font-size:13px;font-weight:600;color:#e6edf3;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}
+.skill-group{margin-bottom:14px}
+.skill-group-label{font-size:11px;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.skill-tags{display:flex;flex-wrap:wrap;gap:5px}
+.skill-tag{background:#21262d;border:1px solid #30363d;color:#c9d1d9;padding:2px 8px;border-radius:4px;font-size:11.5px}
+.skill-tag.highlight{background:#1f6feb22;border-color:#1f6feb55;color:#79c0ff}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.stat-box{background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:10px;text-align:center}
+.stat-num{font-size:22px;font-weight:700;color:#e6edf3}
+.stat-label{font-size:11px;color:#8b949e;margin-top:2px}
+.cert-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid #21262d}
+.cert-item:last-child{border-bottom:none}
+.cert-icon{width:28px;height:28px;background:#f48024;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:700;color:#fff}
+.cert-icon.blue{background:#1f6feb}
+.cert-text{font-size:12px;color:#c9d1d9;line-height:1.4}
+
+/* CONTENT */
+.content{}
+.section{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:20px;margin-bottom:16px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid #21262d}
+.section-header h2{font-size:16px;font-weight:600;color:#e6edf3}
+.section-header .count{background:#21262d;color:#8b949e;font-size:11px;padding:1px 7px;border-radius:20px}
+
+/* EXP CARD */
+.exp-card{border:1px solid #30363d;border-radius:8px;padding:16px;margin-bottom:12px;background:#0d1117;position:relative}
+.exp-card:last-child{margin-bottom:0}
+.exp-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.exp-left{}
+.exp-company{font-size:15px;font-weight:600;color:#58a6ff;margin-bottom:2px}
+.exp-role{font-size:13px;color:#e6edf3;font-weight:500}
+.exp-location{font-size:12px;color:#8b949e;margin-top:2px}
+.exp-date{font-size:12px;color:#8b949e;white-space:nowrap;background:#21262d;padding:3px 8px;border-radius:4px;flex-shrink:0}
+.exp-tag-row{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0 10px}
+.exp-tech{background:#161b22;border:1px solid #30363d;color:#8b949e;padding:2px 7px;border-radius:4px;font-size:11px;font-family:monospace}
+.exp-highlights{list-style:none;padding:0}
+.exp-highlights li{color:#c9d1d9;font-size:13px;line-height:1.65;padding:4px 0 4px 16px;position:relative;border-bottom:1px solid #21262d}
+.exp-highlights li:last-child{border-bottom:none}
+.exp-highlights li::before{content:"▸";position:absolute;left:0;color:#3fb950;font-size:10px;top:6px}
+.exp-highlights li strong{color:#79c0ff;font-weight:500}
+
+/* IMPACT BANNER */
+.impact-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.impact-chip{background:#162032;border:1px solid #1f6feb44;border-radius:6px;padding:10px;text-align:center}
+.impact-num{font-size:18px;font-weight:700;color:#58a6ff}
+.impact-desc{font-size:11px;color:#8b949e;margin-top:2px;line-height:1.3}
+
+/* EDUCATION */
+.edu-card{display:flex;gap:14px;align-items:flex-start;padding:8px 0}
+.edu-icon{width:42px;height:42px;background:#21262d;border:1px solid #30363d;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.edu-name{font-size:14px;font-weight:600;color:#e6edf3}
+.edu-deg{font-size:12.5px;color:#58a6ff;margin-top:2px}
+.edu-meta{font-size:12px;color:#8b949e;margin-top:4px}
+.gpa-badge{display:inline-block;background:#23863622;color:#3fb950;border:1px solid #23863655;padding:1px 8px;border-radius:20px;font-size:11px;margin-left:6px;vertical-align:middle}
+.honor-list{font-size:11.5px;color:#8b949e;margin-top:6px;font-style:italic}
+
+/* CONTRIB GRAPH */
+.contrib-section{margin-top:4px}
+.contrib-label{font-size:12px;color:#8b949e;margin-bottom:8px}
+.contrib-grid{display:flex;gap:3px;flex-wrap:wrap}
+.contrib-week{display:flex;flex-direction:column;gap:3px}
+.cell{width:12px;height:12px;border-radius:2px;background:#161b22}
+.c0{background:#161b22}
+.c1{background:#0e4429}
+.c2{background:#006d32}
+.c3{background:#26a641}
+.c4{background:#39d353}
+
+/* LINKS */
+.link-btn{display:inline-flex;align-items:center;gap:6px;background:#21262d;border:1px solid #30363d;color:#c9d1d9;padding:6px 14px;border-radius:6px;font-size:13px;transition:background .15s}
+.link-btn:hover{background:#30363d;text-decoration:none;color:#e6edf3}
+.link-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+
+/* RESPONSIVE */
+@media(max-width:700px){
+  .main-grid{grid-template-columns:1fr}
+  .hero{grid-template-columns:auto 1fr}
+  .impact-row{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <svg width="22" height="22" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        arslanrao991
+      </div>
+      <div class="nav-links">
+        <a href="#">Overview</a>
+        <a href="#">Repositories</a>
+        <a href="#">Experience</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="avatar">AT</div>
+    <div class="hero-info">
+      <h1>Arslan Tariq</h1>
+      <div class="title">Senior Data Engineer · Lahore, Pakistan</div>
+      <p class="hero-bio">Architecting and optimizing scalable data pipelines with 3+ years of hands-on experience. Passionate about automating end-to-end ETL processes, data modeling, and enabling real-time business intelligence at scale.</p>
+      <div class="hero-meta">
+        <span class="meta-item">
+          <svg width="14" height="14" viewBox="0 0 16 16"><path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/><path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/></svg>
+          Lahore, Pakistan
+        </span>
+        <span class="meta-item">
+          <svg width="14" height="14" viewBox="0 0 16 16"><path d="M0 1.75A.75.75 0 01.75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0111.006 1h4.245a.75.75 0 01.75.75v10.5a.75.75 0 01-.75.75h-4.507a2.25 2.25 0 00-1.591.659l-.622.621a.75.75 0 01-1.06 0l-.622-.621A2.25 2.25 0 005.258 13H.75a.75.75 0 01-.75-.75V1.75z"/></svg>
+          FAST-NUCES · BS Computer Science
+        </span>
+        <span class="meta-item">
+          <svg width="14" height="14" viewBox="0 0 16 16"><path d="M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5C0 2.784.784 2 1.75 2zM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V5.809L8.38 9.397a.75.75 0 01-.76 0L1.5 5.809v6.442zm13-8.181L8 7.88 1.5 4.07v-.32a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25v.32z"/></svg>
+          arslanrao991@gmail.com
+        </span>
+      </div>
+      <div class="badge-row">
+        <span class="badge green">● Available for opportunities</span>
+        <span class="badge">Databricks Certified</span>
+        <span class="badge">3 YOE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="main-grid">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <h3>Impact stats</h3>
+        <div class="stat-grid">
+          <div class="stat-box"><div class="stat-num">3,900+</div><div class="stat-label">hours saved/yr</div></div>
+          <div class="stat-box"><div class="stat-num">99.89%</div><div class="stat-label">data accuracy</div></div>
+          <div class="stat-box"><div class="stat-num">40%</div><div class="stat-label">faster pipelines</div></div>
+          <div class="stat-box"><div class="stat-num">9</div><div class="stat-label">countries served</div></div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Tech stack</h3>
+        <div class="skill-group">
+          <div class="skill-group-label">Languages</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Python</span>
+            <span class="skill-tag highlight">SQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Cloud & Infra</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">AWS Redshift</span>
+            <span class="skill-tag">Lambda</span>
+            <span class="skill-tag">S3</span>
+            <span class="skill-tag">Glue</span>
+            <span class="skill-tag">RDS</span>
+            <span class="skill-tag">ECR</span>
+            <span class="skill-tag">Azure ADF</span>
+            <span class="skill-tag">ADLS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Data & ETL</div>
+          <div class="skill-tags">
+            <span class="skill-tag highlight">Databricks</span>
+            <span class="skill-tag highlight">Snowflake</span>
+            <span class="skill-tag highlight">PySpark</span>
+            <span class="skill-tag">Airflow</span>
+            <span class="skill-tag">Matillion</span>
+            <span class="skill-tag">Delta Lake</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">BI & Viz</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Sisense</span>
+            <span class="skill-tag">Retool</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-group-label">Practices</div>
+          <div class="skill-tags">
+            <span class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Unit Testing</span>
+            <span class="skill-tag">CDC Pipelines</span>
+            <span class="skill-tag">Data Modeling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Certifications</h3>
+        <div class="cert-item">
+          <div class="cert-icon">DB</div>
+          <div class="cert-text">Databricks Certified Associate Data Engineer</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon blue">🎓</div>
+          <div class="cert-text">Dean's Honor Certificate – 6 semesters (3.5+ GPA)</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Connect</h3>
+        <a href="https://linkedin.com/in/arslanrao991" style="display:flex;align-items:center;gap:8px;color:#58a6ff;font-size:13px;margin-bottom:8px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#58a6ff"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          linkedin.com/in/arslanrao991
+        </a>
+        <a href="mailto:arslanrao991@gmail.com" style="display:flex;align-items:center;gap:8px;color:#58a6ff;font-size:13px">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="#58a6ff"><path d="M0 1.75A.75.75 0 01.75 1h14.5a.75.75 0 01.75.75v11.5a.75.75 0 01-.75.75H.75a.75.75 0 01-.75-.75V1.75zM1.5 4.07v8.181h13V4.07L8 7.88 1.5 4.07zm12.5-1.57h-12l6 3.81 6-3.81z"/></svg>
+          arslanrao991@gmail.com
+        </a>
+      </div>
+
+    </aside>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- EXPERIENCE -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Experience</h2>
+          <span class="count">2 positions</span>
+        </div>
+
+        <!-- Dubizzle -->
+        <div class="exp-card">
+          <div class="exp-top">
+            <div class="exp-left">
+              <div class="exp-company">Dubizzle Labs <span style="color:#8b949e;font-size:12px;font-weight:400">(Dubizzle & Bayut Group)</span></div>
+              <div class="exp-role">Data Engineer</div>
+              <div class="exp-location">📍 Lahore, Pakistan</div>
+            </div>
+            <span class="exp-date">July 2024 – Present</span>
+          </div>
+          <div class="impact-row" style="margin-top:12px">
+            <div class="impact-chip"><div class="impact-num">3,900+</div><div class="impact-desc">hours saved annually via automation</div></div>
+            <div class="impact-chip"><div class="impact-num">~5 min</div><div class="impact-desc">report gen (was 60+ min)</div></div>
+            <div class="impact-chip"><div class="impact-num">20%</div><div class="impact-desc">DWH performance gain</div></div>
+          </div>
+          <div class="exp-tag-row">
+            <span class="exp-tech">Python</span><span class="exp-tech">SQL</span><span class="exp-tech">AWS Lambda</span><span class="exp-tech">S3</span><span class="exp-tech">RDS</span><span class="exp-tech">ECR</span><span class="exp-tech">Matillion</span><span class="exp-tech">Sisense</span><span class="exp-tech">Retool</span><span class="exp-tech">Google APIs</span>
+          </div>
+          <ul class="exp-highlights">
+            <li>Built a full-stack reporting automation solution reducing report generation from <strong>60+ min → ~5 min</strong>, automating <strong>350+ monthly reports</strong> and eliminating 100% of manual effort for Sales & Operations.</li>
+            <li>Co-engineered the full automation of the <strong>revenue recognition ELT pipeline</strong>, achieving <strong>99.89% data accuracy</strong> and powering a near real-time financial dashboard.</li>
+            <li>Sole architect of breaking a monolithic ETL serving <strong>9 countries</strong> into a dynamic, country-specific solution with segregated schemas, boosting governance and regional scalability.</li>
+            <li>Optimized Data Warehouse by <strong>20%</strong> via correct Sort/Dist keys, compression encodings, and a dynamic pipeline for Vacuum/Analyze on stale tables.</li>
+            <li>Managed CDC pipelines, data modeling, and cross-system data integration for Dubizzle Egypt, KSA, Bayut Egypt, OLX Lebanon &amp; Pakistan.</li>
+          </ul>
+        </div>
+
+        <!-- Techlogix -->
+        <div class="exp-card">
+          <div class="exp-top">
+            <div class="exp-left">
+              <div class="exp-company">Techlogix Pakistan</div>
+              <div class="exp-role">Data Engineer</div>
+              <div class="exp-location">📍 Lahore, Pakistan</div>
+            </div>
+            <span class="exp-date">March 2023 – June 2024</span>
+          </div>
+          <div class="exp-tag-row">
+            <span class="exp-tech">Databricks</span><span class="exp-tech">Snowflake</span><span class="exp-tech">Airflow</span><span class="exp-tech">PySpark</span><span class="exp-tech">Docker</span><span class="exp-tech">Azure ADF</span><span class="exp-tech">Power BI</span>
+          </div>
+          <ul class="exp-highlights">
+            <li>Transitioned legacy ETL architecture to <strong>Airflow + PySpark + Docker</strong>, achieving a <strong>40% reduction in processing time</strong> with enhanced scalability.</li>
+            <li>Developed the core <strong>Snowflake Data Warehouse</strong> and ELT pipelines for AdalFi, mapping the end-to-end customer journey for real-time insights.</li>
+            <li>Executed PoCs and optimized ELT pipelines on <strong>Databricks</strong> for Blue Cross Blue Shield of Michigan.</li>
+            <li>Refactored complex SQL and Python codebases, drastically improving pipeline logic flow, maintainability, and stability.</li>
+            <li>Built <strong>Power BI dashboards</strong> that streamlined KPI tracking and accelerated management decision-making.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Education</h2>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon">🎓</div>
+          <div>
+            <div class="edu-name">FAST – National University of Computer &amp; Emerging Sciences</div>
+            <div class="edu-deg">Bachelor of Science in Computer Science</div>
+            <div class="edu-meta">Lahore, Pakistan · Graduated April 2023 <span class="gpa-badge">3.57 / 4.00 GPA</span></div>
+            <div class="honor-list">Dean's Honor Certificate in semesters 1, 2, 3, 4, 5 &amp; 8</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTRIB GRAPH -->
+      <div class="section">
+        <div class="section-header">
+          <h2>Activity</h2>
+        </div>
+        <div class="contrib-section">
+          <div class="contrib-label">Pipeline contributions &amp; automation projects – past year</div>
+          <div class="contrib-grid" id="contrib"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const grid = document.getElementById('contrib');
+const levels = [0,0,1,1,2,2,3,4,3,2,1,0,1,2,3,4,4,3,2,1,2,3,4,3,2,1,0,1,2,3,4,4,3,2,3,4,4,3,2,1,0,1,2,3,4,3,2,1,2,3];
+levels.forEach((_, w) => {
+  const week = document.createElement('div');
+  week.className = 'contrib-week';
+  for(let d=0;d<7;d++){
+    const cell = document.createElement('div');
+    const lvl = Math.floor(Math.random()*5);
+    cell.className = `cell c${lvl}`;
+    week.appendChild(cell);
+  }
+  grid.appendChild(week);
+});
+</script>
+</body>
+</html>
