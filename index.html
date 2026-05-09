@@ -17,8 +17,13 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
 .nav-links{display:flex;gap:4px;margin-left:auto}
 .nav-links a{color:#e6edf3;font-size:13px;padding:6px 12px;border-radius:6px;transition:background .15s}
 .nav-links a:hover{background:#30363d;text-decoration:none}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;margin-left:auto;padding:4px}
+.hamburger span{width:22px;height:2px;background:#e6edf3;border-radius:2px;display:block}
+.mob-menu{display:none;background:#161b22;border-bottom:1px solid #30363d}
+.mob-menu a{display:block;color:#e6edf3;font-size:14px;padding:12px 20px;border-bottom:1px solid #21262d}
+.mob-menu a:last-child{border-bottom:none}
 .hero{padding:48px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:start}
-.avatar{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,#1f6feb,#388bfd);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;color:#fff;flex-shrink:0;border:3px solid #30363d}
+.avatar{width:90px;height:90px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid #30363d}
 .hero-info h1{font-size:26px;font-weight:600;color:#e6edf3;margin-bottom:4px}
 .hero-info .title{color:#8b949e;font-size:15px;margin-bottom:12px}
 .hero-bio{color:#c9d1d9;font-size:13.5px;line-height:1.65;max-width:640px;margin-bottom:16px}
@@ -56,7 +61,6 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
 .exp-company{font-size:15px;font-weight:600;margin-bottom:2px}
 .exp-company a{color:#58a6ff}
 .exp-role{font-size:13px;color:#e6edf3;font-weight:500}
-.exp-location{font-size:12px;color:#8b949e;margin-top:2px}
 .exp-date{font-size:12px;color:#8b949e;white-space:nowrap;background:#21262d;padding:3px 8px;border-radius:4px;flex-shrink:0}
 .exp-tag-row{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0 10px}
 .exp-tech{background:#161b22;border:1px solid #30363d;color:#8b949e;padding:2px 7px;border-radius:4px;font-size:11px;font-family:monospace}
@@ -76,9 +80,52 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
 .edu-meta{font-size:12px;color:#8b949e;margin-top:4px}
 .gpa-badge{display:inline-block;background:#23863622;color:#3fb950;border:1px solid #23863655;padding:1px 8px;border-radius:20px;font-size:11px;margin-left:6px;vertical-align:middle}
 .honor-list{font-size:11.5px;color:#8b949e;margin-top:6px;font-style:italic}
-@media(max-width:700px){
-  .main-grid{grid-template-columns:1fr}
+
+/* ── MOBILE ONLY ── */
+@media(max-width:768px){
+  /* Nav */
+  .nav-links{display:none}
+  .hamburger{display:flex}
+
+  /* Hero */
+  .hero{padding:24px 0 20px;gap:14px}
+  .avatar{width:64px;height:64px}
+  .hero-info h1{font-size:18px}
+  .hero-info .title{font-size:13px;margin-bottom:8px}
+  .hero-bio{font-size:13px;margin-bottom:12px}
+  .hero-meta{gap:10px}
+  .meta-item,.meta-item a{font-size:12px}
+
+  /* Flatten grid into a single full-width column */
+  .main-grid{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    padding-bottom:32px;
+  }
+  /* Make aside children participate directly in the flex column */
+  aside{display:contents}
+
+  /* Every section becomes full width */
+  .sidebar-section,
+  .section{
+    width:100%;
+    margin-bottom:12px;
+    border-radius:8px;
+  }
+
+  /* Mobile section order */
+  .exp-section  {order:1}
+  .edu-section  {order:2}
+  .stat-section {order:3}
+  .tech-section {order:4}
+  .cert-section {order:5}
+  .conn-section {order:6}
+
+  /* Minor layout tweaks */
   .impact-row{grid-template-columns:repeat(2,1fr)}
+  .stat-grid{grid-template-columns:repeat(2,1fr)}
+  #contact-popup{right:8px;left:8px;min-width:unset}
 }
 </style>
 </head>
@@ -92,14 +139,24 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
         arslanrao991
       </div>
       <div class="nav-links">
-        <a href="">Overview</a>
-        <a href="https://github.com/arslanrao991?tab=repositories">Repositories</a>
-        <a href="">Experience</a>
-        <a href="" onclick="toggleContact(event)">Contact</a>
+        <a href="#">Overview</a>
+        <a href="https://github.com/arslanrao991?tab=repositories" target="_blank">Repositories</a>
+        <a href="#">Experience</a>
+        <a href="#" onclick="toggleContact(event)">Contact</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
       </div>
     </div>
   </div>
 </nav>
+
+<div class="mob-menu" id="mob-menu">
+  <a href="#">Overview</a>
+  <a href="https://github.com/arslanrao991?tab=repositories" target="_blank">Repositories</a>
+  <a href="#">Experience</a>
+  <a href="#" onclick="toggleContact(event)">Contact</a>
+</div>
 
 <div id="contact-popup" style="display:none;position:fixed;top:52px;right:20px;z-index:999;background:#161b22;border:1px solid #30363d;border-radius:10px;padding:18px 20px;min-width:260px;box-shadow:0 8px 24px rgba(0,0,0,0.5)">
   <div style="font-size:13px;font-weight:600;color:#e6edf3;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #30363d">Get in touch</div>
@@ -127,7 +184,7 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
 
 <div class="container">
   <div class="hero">
-    <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQFT0JjIno54CQ/profile-displayphoto-crop_800_800/B4DZxpHg20IUAI-/0/1771290111612?e=1779321600&v=beta&t=GVNvtEDPoRLN3F6MgZR_7HVWdRPWzQIUjbqPs8fCNzI" alt="Arslan Tariq" style="object-fit:cover;width:90px;height:90px;border-radius:50%;border:3px solid #30363d;flex-shrink:0">
+    <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQFT0JjIno54CQ/profile-displayphoto-crop_800_800/B4DZxpHg20IUAI-/0/1771290111612?e=1779321600&v=beta&t=GVNvtEDPoRLN3F6MgZR_7HVWdRPWzQIUjbqPs8fCNzI" alt="Arslan Tariq"/>
     <div class="hero-info">
       <h1>Arslan Tariq</h1>
       <div class="title">Senior Data Engineer</div>
@@ -159,8 +216,10 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
   </div>
 
   <div class="main-grid">
+
+    <!-- SIDEBAR -->
     <aside>
-      <div class="sidebar-section">
+      <div class="sidebar-section stat-section">
         <h3>Impact stats</h3>
         <div class="stat-grid">
           <div class="stat-box"><div class="stat-num">3,900+</div><div class="stat-label">hours saved/yr</div></div>
@@ -170,7 +229,7 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
         </div>
       </div>
 
-      <div class="sidebar-section">
+      <div class="sidebar-section tech-section">
         <h3>Tech stack</h3>
         <div class="skill-group">
           <div class="skill-group-label">Languages</div>
@@ -224,7 +283,7 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
         </div>
       </div>
 
-      <div class="sidebar-section">
+      <div class="sidebar-section cert-section">
         <h3>Certifications</h3>
         <div class="cert-item">
           <div class="cert-icon" style="background:#fff;padding:2px"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx5S9zgoaNNutlSTL-ov9iVtJ32rogt0k1Ig&s" style="width:100%;height:100%;object-fit:contain;border-radius:3px"/></div>
@@ -236,9 +295,9 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
         </div>
       </div>
 
-      <div class="sidebar-section">
+      <div class="sidebar-section conn-section">
         <h3>Connect</h3>
-        <a href="https://linkedin.com/in/arslanrao991" target="_blank" style="display:flex;align-items:center;gap:8px;color:#58a6ff;font-size:13px;margin-bottom:8px">
+        <a href="https://linkedin.com/in/arslanrao991" target="_blank" style="display:flex;align-items:center;gap:8px;color:#58a6ff;font-size:13px;margin-bottom:10px">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="#58a6ff"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           linkedin.com/in/arslanrao991
         </a>
@@ -249,17 +308,16 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
       </div>
     </aside>
 
-    <div class="content">
-      <div class="section">
+    <!-- CONTENT -->
+    <div>
+      <div class="section exp-section">
         <div class="section-header">
           <h2>Experience</h2>
           <span class="count">2 positions</span>
         </div>
-
-        <!-- Dubizzle Labs -->
         <div class="exp-card">
           <div class="exp-top">
-            <div class="exp-left">
+            <div>
               <div class="exp-company"><a href="https://www.dubizzlelabs.com/" target="_blank">Dubizzle Labs</a> <span style="color:#8b949e;font-size:12px;font-weight:400">(Dubizzle & Bayut Group)</span></div>
               <div class="exp-role">Data Engineer</div>
             </div>
@@ -283,11 +341,9 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
             <li>Engineered robust ELT pipelines using <strong>Matillion Cloud</strong>, enabling real-time insights through Sisense dashboards. Developed key Unit Tests to reconcile data across layers.</li>
           </ul>
         </div>
-
-        <!-- Techlogix -->
         <div class="exp-card">
           <div class="exp-top">
-            <div class="exp-left">
+            <div>
               <div class="exp-company"><a href="https://www.techlogix.com/" target="_blank">Techlogix Pakistan</a></div>
               <div class="exp-role">Data Engineer</div>
             </div>
@@ -306,7 +362,7 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
         </div>
       </div>
 
-      <div class="section">
+      <div class="section edu-section">
         <div class="section-header">
           <h2>Education</h2>
         </div>
@@ -321,13 +377,19 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
         </div>
       </div>
     </div>
+
   </div>
 </div>
+
 <script>
 function toggleContact(e){
   e.preventDefault();
   const p=document.getElementById('contact-popup');
   p.style.display=p.style.display==='none'?'block':'none';
+}
+function toggleMenu(){
+  const m=document.getElementById('mob-menu');
+  m.style.display=m.style.display==='block'?'none':'block';
 }
 document.addEventListener('click',function(e){
   const p=document.getElementById('contact-popup');
