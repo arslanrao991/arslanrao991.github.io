@@ -233,11 +233,13 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
       <div class="sidebar-section tech-section">
         <h3>Tech stack</h3>
         <div class="skill-group">
-          <div class="skill-group-label">Languages</div>
+          <div class="skill-group-label">Languages & Libraries</div>
           <div class="skill-tags">
             <span class="skill-tag highlight">Python</span>
             <span class="skill-tag highlight">SQL</span>
             <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag highlight">PySpark</span>
           </div>
         </div>
         <div class="skill-group">
@@ -245,12 +247,15 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
           <div class="skill-tags">
             <span class="skill-tag highlight">AWS Redshift</span>
             <span class="skill-tag">Lambda</span>
-            <span class="skill-tag">S3</span>
-            <span class="skill-tag">Glue</span>
-            <span class="skill-tag">RDS</span>
-            <span class="skill-tag">ECR</span>
+            <span class="skill-tag">AWS S3</span>
+            <span class="skill-tag">AWS Glue</span>
+            <span class="skill-tag">AWS RDS</span>
+            <span class="skill-tag">AWS EKS</span>
+            <span class="skill-tag">AWS ECR</span>
             <span class="skill-tag">Azure ADF</span>
             <span class="skill-tag">ADLS</span>
+            <span class="skill-tag">BigQuery</span>
+            <span class="skill-tag highlight">Kafka</span>
           </div>
         </div>
         <div class="skill-group">
@@ -258,7 +263,6 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
           <div class="skill-tags">
             <span class="skill-tag highlight">Databricks</span>
             <span class="skill-tag highlight">Snowflake</span>
-            <span class="skill-tag highlight">PySpark</span>
             <span class="skill-tag">Airflow</span>
             <span class="skill-tag">Matillion</span>
             <span class="skill-tag">Delta Lake</span>
@@ -280,6 +284,7 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
             <span class="skill-tag">Unit Testing</span>
             <span class="skill-tag">CDC Pipelines</span>
             <span class="skill-tag">Data Modeling</span>
+            <span class="skill-tag highlight">Automation</span>
           </div>
         </div>
       </div>
@@ -334,12 +339,12 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
           </div>
           <ul class="exp-highlights">
             <li>Working on Dubizzle Egypt, KSA, Bayut Egypt, OLX Lebanon & Pakistan data — executing continuous <strong>data modeling and process automation</strong> to ensure high data integrity and real-time insights.</li>
-            <li>Managing data integration across multiple systems and improving existing CDC pipelines.</li>
-            <li>Built a full-stack reporting automation solution reducing report generation from <strong>60+ min → ~5 min</strong>, automating <strong>350+ monthly reports</strong> and eliminating 100% of manual effort for Sales & Operations.</li>
-            <li>Co-engineered full automation of the <strong>revenue recognition ELT pipeline</strong>, achieving <strong>99.89% data accuracy</strong> and powering a near real-time financial dashboard.</li>
-            <li>Solely architected breakdown of a monolithic ETL serving <strong>9 countries</strong> into a dynamic, country-specific solution with segregated schemas, boosting governance and regional scalability.</li>
-            <li>Optimized Data Warehouse by <strong>20%</strong> via correct Sort/Dist keys, compression encodings, and a dynamic pipeline for Vacuum/Analyze on stale tables.</li>
-            <li>Engineered robust ELT pipelines using <strong>Matillion Cloud</strong>, enabling real-time insights through Sisense dashboards. Developed key Unit Tests to reconcile data across layers.</li>
+            <li>Building a production-grade real-time CDC ingestion pipeline with Debezium, Kafka, Python, and Kubernetes to enable event-driven, near real-time data streaming across systems.</li>
+            <li>Engineered multi-platform analytics ingestion pipelines for App Store, Play Store, and TikTok. Leveraging AWS Lambda, Python, web scraping, and TikTok Marketing APIs to automate extraction of 15+ KPIs, replacing manual data pulls and enabling near real-time visibility into cross-platform performance metrics.</li>
+            <li>Architected and delivered an end-to-end reporting automation platform using Python, AWS (Lambda, S3, RDS, ECR), SQL, Google APIs, and Retool, reducing generation time by 95% (60+ min to ~5 min) while fully automating 350+ monthly reports and reclaiming 3,900+ hours annually for Sales and Operations teams.</li>
+            <li>Co-engineered the full automation of the revenue recognition ELT pipeline, eliminating manual effort and achieving a 99.89% data accuracy, which powered critical financial insights via a dedicated near real-time dashboard.</li>
+            <li>Optimized Redshift DWH performance by <strong>20%</strong> through Sort/Dist key redesign, compression tuning, and a self-maintaining pipeline that periodically detects and resolves stale table statistics via automated Vacuum/Analyze execution.</li>
+            <li>Solely architected and delivered the structural breakdown of a monolithic, end-to-end ETL pipeline serving <strong>9 countries</strong>, replacing it with a dynamic, independent, country-specific solution with segregated schemas that drastically improved data governance, BI dashboards and maximized regional scalability.</li>
           </ul>
         </div>
         <div class="exp-card">
