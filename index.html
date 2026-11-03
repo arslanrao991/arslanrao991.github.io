@@ -4,17 +4,19 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Arslan Tariq – Senior Data Engineer</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' rx='12' fill='%23161b22'/><path fill='white' d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z'/></svg>"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%231f6feb'/><text y='.9em' x='50%' text-anchor='middle' font-size='45' font-family='Arial' font-weight='bold' fill='white'>AT</text></svg>"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.6;font-size:14px}
 a{color:#58a6ff;text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* NAV */
 nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:sticky;top:0;z-index:100}
 .nav-inner{display:flex;align-items:center;gap:20px}
-.nav-logo{font-size:22px;color:#fff;font-weight:600;display:flex;align-items:center;gap:8px}
-.nav-logo svg{fill:#fff}
+.nav-logo{font-size:20px;color:#fff;font-weight:600;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.nav-logo svg{fill:#fff;flex-shrink:0}
 .nav-links{display:flex;gap:4px;margin-left:auto}
 .nav-links a{color:#e6edf3;font-size:13px;padding:6px 12px;border-radius:6px;transition:background .15s}
 .nav-links a:hover{background:#30363d;text-decoration:none}
@@ -23,19 +25,25 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
 .mob-menu{display:none;background:#161b22;border-bottom:1px solid #30363d}
 .mob-menu a{display:block;color:#e6edf3;font-size:14px;padding:12px 20px;border-bottom:1px solid #21262d}
 .mob-menu a:last-child{border-bottom:none}
-.hero{padding:48px 0 32px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:start}
+
+/* HERO */
+.hero{padding:32px 0 24px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
 .avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;flex-shrink:0;border:3px solid #30363d}
-.hero-info h1{font-size:26px;font-weight:600;color:#e6edf3;margin-bottom:4px}
-.hero-info .title{color:#8b949e;font-size:15px;margin-bottom:12px}
-.hero-bio{color:#c9d1d9;font-size:13.5px;line-height:1.65;max-width:640px;margin-bottom:16px}
-.hero-meta{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px}
+.hero-info h1{font-size:24px;font-weight:600;color:#e6edf3;margin-bottom:2px}
+.hero-info .title{color:#8b949e;font-size:14px;margin-bottom:10px}
+.hero-bio{color:#c9d1d9;font-size:13.5px;line-height:1.65;max-width:640px;margin-bottom:14px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:12px}
 .meta-item{display:flex;align-items:center;gap:6px;color:#8b949e;font-size:13px}
 .meta-item a{color:#58a6ff;font-size:13px}
 .meta-item svg{fill:#8b949e;flex-shrink:0}
 .badge-row{display:flex;gap:8px;flex-wrap:wrap}
 .badge{background:#1f6feb22;color:#58a6ff;border:1px solid #1f6feb55;padding:3px 10px;border-radius:20px;font-size:12px}
 .badge.green{background:#23863622;color:#3fb950;border-color:#23863655}
-.main-grid{display:grid;grid-template-columns:260px 1fr;gap:24px;padding-bottom:48px}
+
+/* LAYOUT */
+.main-grid{display:grid;grid-template-columns:260px 1fr;gap:24px;padding-bottom:48px;align-items:start}
+
+/* SIDEBAR */
 .sidebar-section{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:16px;margin-bottom:16px}
 .sidebar-section h3{font-size:13px;font-weight:600;color:#e6edf3;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}
 .skill-group{margin-bottom:14px}
@@ -50,18 +58,23 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
 .cert-item{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid #21262d}
 .cert-item:last-child{border-bottom:none}
 .cert-icon{width:28px;height:28px;background:#f48024;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:700;color:#fff}
-.cert-icon.blue{background:#1f6feb}
+.cert-icon.blue{background:#0078d4}
 .cert-text{font-size:12px;color:#c9d1d9;line-height:1.4}
+
+/* SECTIONS */
 .section{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:20px;margin-bottom:16px}
 .section-header{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid #21262d}
 .section-header h2{font-size:16px;font-weight:600;color:#e6edf3}
 .section-header .count{background:#21262d;color:#8b949e;font-size:11px;padding:1px 7px;border-radius:20px}
+
+/* EXP */
 .exp-card{border:1px solid #30363d;border-radius:8px;padding:16px;margin-bottom:12px;background:#0d1117}
 .exp-card:last-child{margin-bottom:0}
 .exp-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
 .exp-company{font-size:15px;font-weight:600;margin-bottom:2px}
 .exp-company a{color:#58a6ff}
 .exp-role{font-size:13px;color:#e6edf3;font-weight:500}
+.exp-location{font-size:12px;color:#8b949e;margin-top:2px}
 .exp-date{font-size:12px;color:#8b949e;white-space:nowrap;background:#21262d;padding:3px 8px;border-radius:4px;flex-shrink:0}
 .exp-tag-row{display:flex;flex-wrap:wrap;gap:5px;margin:12px 0 10px}
 .exp-tech{background:#161b22;border:1px solid #30363d;color:#8b949e;padding:2px 7px;border-radius:4px;font-size:11px;font-family:monospace}
@@ -74,6 +87,9 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
 .impact-chip{background:#162032;border:1px solid #1f6feb44;border-radius:6px;padding:10px;text-align:center}
 .impact-num{font-size:18px;font-weight:700;color:#58a6ff}
 .impact-desc{font-size:11px;color:#8b949e;margin-top:2px;line-height:1.3}
+.current-badge{display:inline-block;background:#23863622;color:#3fb950;border:1px solid #23863655;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;margin-left:6px;vertical-align:middle}
+
+/* EDU */
 .edu-card{display:flex;gap:14px;align-items:flex-start;padding:8px 0}
 .edu-icon{width:42px;height:42px;background:#21262d;border:1px solid #30363d;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
 .edu-name{font-size:14px;font-weight:600;color:#e6edf3}
@@ -82,48 +98,26 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
 .gpa-badge{display:inline-block;background:#23863622;color:#3fb950;border:1px solid #23863655;padding:1px 8px;border-radius:20px;font-size:11px;margin-left:6px;vertical-align:middle}
 .honor-list{font-size:11.5px;color:#8b949e;margin-top:6px;font-style:italic}
 
-/* ── MOBILE ONLY ── */
+/* CONTACT POPUP */
+#contact-popup{display:none;position:fixed;top:52px;right:20px;z-index:999;background:#161b22;border:1px solid #30363d;border-radius:10px;padding:18px 20px;min-width:260px;box-shadow:0 8px 24px rgba(0,0,0,0.5)}
+
+/* MOBILE */
 @media(max-width:768px){
-  /* Nav */
   .nav-links{display:none}
   .hamburger{display:flex}
-
-  /* Hero */
-  .hero{padding:24px 0 20px;gap:14px}
-  .avatar{width:64px;height:64px}
+  .hero{gap:14px}
+  .avatar{width:66px;height:66px}
   .hero-info h1{font-size:18px}
-  .hero-info .title{font-size:13px;margin-bottom:8px}
-  .hero-bio{font-size:13px;margin-bottom:12px}
-  .hero-meta{gap:10px}
-  .meta-item,.meta-item a{font-size:12px}
-
-  /* Flatten grid into a single full-width column */
-  .main-grid{
-    display:flex;
-    flex-direction:column;
-    gap:0;
-    padding-bottom:32px;
-  }
-  /* Make aside children participate directly in the flex column */
+  .hero-bio{display:none}
+  .main-grid{display:flex;flex-direction:column;gap:0;padding-bottom:32px}
   aside{display:contents}
-
-  /* Every section becomes full width */
-  .sidebar-section,
-  .section{
-    width:100%;
-    margin-bottom:12px;
-    border-radius:8px;
-  }
-
-  /* Mobile section order */
-  .exp-section  {order:1}
-  .edu-section  {order:2}
-  .stat-section {order:3}
-  .tech-section {order:4}
-  .cert-section {order:5}
-  .conn-section {order:6}
-
-  /* Minor layout tweaks */
+  .stat-section{order:3}
+  .tech-section{order:4}
+  .cert-section{order:5}
+  .conn-section{order:6}
+  .exp-section{order:1}
+  .edu-section{order:2}
+  .sidebar-section,.section{width:100%;margin-bottom:12px;border-radius:8px}
   .impact-row{grid-template-columns:repeat(2,1fr)}
   .stat-grid{grid-template-columns:repeat(2,1fr)}
   #contact-popup{right:8px;left:8px;min-width:unset}
@@ -159,37 +153,34 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
   <a href="#" onclick="toggleContact(event)">Contact</a>
 </div>
 
-<div id="contact-popup" style="display:none;position:fixed;top:52px;right:20px;z-index:999;background:#161b22;border:1px solid #30363d;border-radius:10px;padding:18px 20px;min-width:260px;box-shadow:0 8px 24px rgba(0,0,0,0.5)">
+<div id="contact-popup">
   <div style="font-size:13px;font-weight:600;color:#e6edf3;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #30363d">Get in touch</div>
   <div style="display:flex;flex-direction:column;gap:12px">
     <a href="tel:+923094233626" style="display:flex;align-items:center;gap:10px;color:#c9d1d9;font-size:13px">
       <span style="width:28px;height:28px;background:#21262d;border:1px solid #30363d;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
         <svg width="13" height="13" viewBox="0 0 16 16" fill="#8b949e"><path d="M3.654 1.328a.678.678 0 00-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 004.168 6.608 17.569 17.569 0 006.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 00-.063-1.015l-2.307-1.794a.678.678 0 00-.58-.122l-2.19.547a1.745 1.745 0 01-1.657-.459L5.333 9.192a1.745 1.745 0 01-.46-1.657l.548-2.19a.678.678 0 00-.122-.58L3.654 1.328z"/></svg>
-      </span>
-      (+92) 309-4233626
+      </span>(+92) 309-4233626
     </a>
     <a href="mailto:arslanrao991@gmail.com" style="display:flex;align-items:center;gap:10px;color:#c9d1d9;font-size:13px">
       <span style="width:28px;height:28px;background:#21262d;border:1px solid #30363d;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
         <svg width="13" height="13" viewBox="0 0 16 16" fill="#8b949e"><path d="M0 1.75A.75.75 0 01.75 1h14.5a.75.75 0 01.75.75v11.5a.75.75 0 01-.75.75H.75a.75.75 0 01-.75-.75V1.75zM1.5 4.07v8.181h13V4.07L8 7.88 1.5 4.07zm12.5-1.57h-12l6 3.81 6-3.81z"/></svg>
-      </span>
-      arslanrao991@gmail.com
+      </span>arslanrao991@gmail.com
     </a>
     <a href="https://linkedin.com/in/arslanrao991" target="_blank" style="display:flex;align-items:center;gap:10px;color:#c9d1d9;font-size:13px">
       <span style="width:28px;height:28px;background:#21262d;border:1px solid #30363d;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="#8b949e"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-      </span>
-      linkedin.com/in/arslanrao991
+      </span>linkedin.com/in/arslanrao991
     </a>
   </div>
 </div>
 
 <div class="container">
   <div class="hero">
-    <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQHMOTbJ6_1HlA/profile-displayphoto-scale_200_200/B4DZ6cOpZ6IYAc-/0/1780737549121?e=1794441600&v=beta&t=gWSMTFMNB65fS0DKjvmNKRXLFikL5wLVBJIfHJC5yDw" alt="Arslan Tariq"/>
+    <img class="avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQFT0JjIno54CQ/profile-displayphoto-crop_800_800/B4DZxpHg20IUAI-/0/1771290111612?e=1779321600&v=beta&t=GVNvtEDPoRLN3F6MgZR_7HVWdRPWzQIUjbqPs8fCNzI" alt="Arslan Tariq"/>
     <div class="hero-info">
       <h1>Arslan Tariq</h1>
-      <div class="title">Senior Data Engineer</div>
-      <p class="hero-bio">Architecting and optimizing scalable data pipelines with 3+ years of hands-on experience. Passionate about automating end-to-end ETL processes, data modeling, and enabling real-time business intelligence at scale.</p>
+      <div class="title">Senior Data Engineer · Lahore, Pakistan</div>
+      <p class="hero-bio">Senior Data Engineer with 3.5+ years building and automating scalable data platforms across 9 markets. Automated 350+ monthly reports (95% faster), reclaimed 3,900+ hours annually, and delivered 99.89% accuracy on revenue-critical pipelines.</p>
       <div class="hero-meta">
         <span class="meta-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="#8b949e"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -211,13 +202,13 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
       <div class="badge-row">
         <span class="badge green">● Available for opportunities</span>
         <span class="badge">Databricks Certified</span>
-        <span class="badge">3+ YOE</span>
+        <span class="badge">Microsoft Fabric Certified</span>
+        <span class="badge">3.5 YOE</span>
       </div>
     </div>
   </div>
 
   <div class="main-grid">
-
     <!-- SIDEBAR -->
     <aside>
       <div class="sidebar-section stat-section">
@@ -243,36 +234,43 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
           </div>
         </div>
         <div class="skill-group">
-          <div class="skill-group-label">Cloud & Infra</div>
+          <div class="skill-group-label">Data Engineering</div>
           <div class="skill-tags">
-            <span class="skill-tag highlight">AWS Redshift</span>
-            <span class="skill-tag">Lambda</span>
-            <span class="skill-tag">AWS S3</span>
+            <span class="skill-tag highlight">Airflow</span>
+            <span class="skill-tag">Matillion</span>
             <span class="skill-tag">AWS Glue</span>
-            <span class="skill-tag">AWS RDS</span>
-            <span class="skill-tag">AWS EKS</span>
-            <span class="skill-tag">AWS ECR</span>
-            <span class="skill-tag">Azure ADF</span>
-            <span class="skill-tag">ADLS</span>
-            <span class="skill-tag highlight">BigQuery</span>
-            <span class="skill-tag highlight">Kafka</span>
+            <span class="skill-tag">Azure Data Factory</span>
+            <span class="skill-tag">CDC Pipelines</span>
+            <span class="skill-tag">Data Modeling</span>
+            <span class="skill-tag">Data Warehousing</span>
+            <span class="skill-tag">Web Scraping</span>
           </div>
         </div>
         <div class="skill-group">
-          <div class="skill-group-label">Data & ETL</div>
+          <div class="skill-group-label">Platforms & Cloud</div>
           <div class="skill-tags">
-            <span class="skill-tag highlight">Microsoft Fabrics</span>
+            <span class="skill-tag highlight">Microsoft Fabric</span>
             <span class="skill-tag highlight">Databricks</span>
             <span class="skill-tag highlight">Snowflake</span>
-            <span class="skill-tag">Airflow</span>
-            <span class="skill-tag">Matillion</span>
+            <span class="skill-tag highlight">AWS Redshift</span>
+            <span class="skill-tag">BigQuery</span>
             <span class="skill-tag">Delta Lake</span>
-            <span class="skill-tag highlight">Web Scraping</span>
+            <span class="skill-tag">S3</span>
+            <span class="skill-tag">Lambda</span>
+            <span class="skill-tag">RDS</span>
+            <span class="skill-tag">ECR</span>
+            <span class="skill-tag">ADLS</span>
+            <span class="skill-tag">Azure SQL</span>
           </div>
         </div>
         <div class="skill-group">
-          <div class="skill-group-label">BI & Visulisation</div>
+          <div class="skill-group-label">Infrastructure & BI</div>
           <div class="skill-tags">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Kubernetes</span>
+            <span class="skill-tag">EKS</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">CI/CD</span>
             <span class="skill-tag">Power BI</span>
             <span class="skill-tag">Sisense</span>
             <span class="skill-tag">Retool</span>
@@ -281,12 +279,11 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
         <div class="skill-group">
           <div class="skill-group-label">Practices</div>
           <div class="skill-tags">
-            <span class="skill-tag">CI/CD</span>
-            <span class="skill-tag">Git</span>
             <span class="skill-tag">Unit Testing</span>
-            <span class="skill-tag">CDC Pipelines</span>
-            <span class="skill-tag">Data Modeling</span>
-            <span class="skill-tag highlight">Automation</span>
+            <span class="skill-tag">Data Governance</span>
+            <span class="skill-tag">Data Quality</span>
+            <span class="skill-tag">Real-Time Ingestion</span>
+            <span class="skill-tag">Automation</span>
           </div>
         </div>
       </div>
@@ -294,12 +291,16 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
       <div class="sidebar-section cert-section">
         <h3>Certifications</h3>
         <div class="cert-item">
+          <div class="cert-icon blue">🏅</div>
+          <div class="cert-text">Microsoft Certified: Fabric Data Engineer Associate (DP-700)</div>
+        </div>
+        <div class="cert-item">
           <div class="cert-icon" style="background:#fff;padding:2px"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx5S9zgoaNNutlSTL-ov9iVtJ32rogt0k1Ig&s" style="width:100%;height:100%;object-fit:contain;border-radius:3px"/></div>
           <div class="cert-text"><a href="https://credentials.databricks.com/1f225d2a-116d-4955-86f8-d1197de511bf" target="_blank">Databricks Certified Associate Data Engineer</a></div>
         </div>
         <div class="cert-item">
-          <div class="cert-icon blue">🎓</div>
-          <div class="cert-text">Dean's Honor Certificate – 6 semesters (3.5+ GPA)</div>
+          <div class="cert-icon" style="background:#1f6feb">🎓</div>
+          <div class="cert-text">Dean's Honor Certificate – 6 of 8 semesters (3.5+ GPA)</div>
         </div>
       </div>
 
@@ -321,15 +322,41 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
       <div class="section exp-section">
         <div class="section-header">
           <h2>Experience</h2>
-          <span class="count">2 positions</span>
+          <span class="count">3 positions</span>
         </div>
+
+        <!-- Radity GmbH -->
+        <div class="exp-card">
+          <div class="exp-top">
+            <div>
+              <div class="exp-company">
+                <a href="https://www.radity.com/" target="_blank">Radity GmbH</a>
+                <span style="color:#8b949e;font-size:12px;font-weight:400"> · Zug, Switzerland</span>
+                <span class="current-badge">Current</span>
+              </div>
+              <div class="exp-role">Fullstack Data Engineer <span style="color:#8b949e;font-size:11px">(Remote)</span></div>
+            </div>
+            <span class="exp-date">Aug 2026 – Present</span>
+          </div>
+          <div class="exp-tag-row">
+            <span class="exp-tech">Microsoft Fabric</span>
+            <span class="exp-tech">Azure</span>
+            <span class="exp-tech">Power BI</span>
+            <span class="exp-tech">Data Warehousing</span>
+          </div>
+          <ul class="exp-highlights">
+            <li>Building an <strong>Insuretech Data Warehouse and analytics platform</strong> using Microsoft Fabric and Azure Cloud, sourcing data from core insurance platforms including PAS (Policy Administrative Systems), Agent System, and Underwriter Portal.</li>
+          </ul>
+        </div>
+
+        <!-- Dubizzle Labs -->
         <div class="exp-card">
           <div class="exp-top">
             <div>
               <div class="exp-company"><a href="https://www.dubizzlelabs.com/" target="_blank">Dubizzle Labs</a> <span style="color:#8b949e;font-size:12px;font-weight:400">(Dubizzle & Bayut Group)</span></div>
-              <div class="exp-role">Data Engineer</div>
+              <div class="exp-role">Data Engineer → Senior Data Engineer</div>
             </div>
-            <span class="exp-date">July 2024 – Present</span>
+            <span class="exp-date">July 2024 – Aug 2026</span>
           </div>
           <div class="impact-row" style="margin-top:12px">
             <div class="impact-chip"><div class="impact-num">3,900+</div><div class="impact-desc">hours saved annually via automation</div></div>
@@ -337,18 +364,21 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
             <div class="impact-chip"><div class="impact-num">20%</div><div class="impact-desc">DWH performance gain</div></div>
           </div>
           <div class="exp-tag-row">
-            <span class="exp-tech">Python</span><span class="exp-tech">SQL</span><span class="exp-tech">AWS Redshift</span><span class="exp-tech">Lambda</span><span class="exp-tech">S3</span><span class="exp-tech">RDS</span><span class="exp-tech">ECR</span><span class="exp-tech">Matillion</span><span class="exp-tech">Sisense</span><span class="exp-tech">Retool</span><span class="exp-tech">Google APIs</span>
+            <span class="exp-tech">Python</span><span class="exp-tech">SQL</span><span class="exp-tech">AWS Redshift</span><span class="exp-tech">Lambda</span><span class="exp-tech">S3</span><span class="exp-tech">RDS</span><span class="exp-tech">ECR</span><span class="exp-tech">Matillion</span><span class="exp-tech">Microsoft Fabric</span><span class="exp-tech">Sisense</span><span class="exp-tech">Retool</span><span class="exp-tech">Google APIs</span>
           </div>
           <ul class="exp-highlights">
-            <li>Working on Dubizzle Egypt, KSA, Bayut Egypt, OLX Lebanon & Pakistan data — executing continuous <strong>data modeling and process automation</strong> to ensure high data integrity and real-time insights.</li>
-            <li>Maintaining CDC ingestion pipeline to enable event-driven, near real-time data streaming across systems.</li>
-            <li>Engineered multi-platform <strong>analytics ingestion pipelines</strong> for App Store and Play Store Leveraging AWS Lambda, Python and web scraping to automate extraction of 30+ KPIs, replacing manual data pulls and enabling near real-time visibility into cross-platform performance metrics.</li>
-            <li>Architected and delivered an end-to-end reporting automation platform using Python, AWS (Lambda, S3, RDS, ECR), SQL, Google APIs, and Retool, reducing generation time by <strong>95% (60+ min to ~5 min)</strong> while fully automating <strong>350+ monthly</strong> reports and reclaiming <strong>3,900+ hours annually</strong> for Sales and Operations teams.</li>
-            <li>Co-engineered the full automation of the revenue recognition ELT pipeline, eliminating manual effort and achieving a 99.89% data accuracy, which powered critical financial insights via a dedicated near real-time dashboard.</li>
-            <li>Optimized Redshift DWH performance by <strong>20%</strong> through Sort/Dist key redesign, compression tuning, and a self-maintaining pipeline that periodically detects and resolves stale table statistics via automated Vacuum/Analyze execution.</li>
-            <li>Solely architected and delivered the structural breakdown of a monolithic, end-to-end ETL pipeline serving <strong>9 countries</strong>, replacing it with a dynamic, independent, country-specific solution with segregated schemas that drastically improved data governance, BI dashboards and maximized regional scalability.</li>
+            <li>Drove data modeling and process automation across <strong>6 markets</strong> (dubizzle Egypt/KSA, Bayut Egypt, OLX Lebanon/Pakistan, Hatla2ee Egypt) ensuring high data integrity and real-time insights.</li>
+            <li>Operated and enhanced a <strong>CDC ingestion pipeline</strong> enabling event-driven, near real-time data streaming across systems.</li>
+            <li>Engineered multi-platform analytics ingestion pipelines for <strong>App Store and Play Store</strong> using AWS Lambda, Python, APIs and web scraping, automating extraction of 30+ KPIs and replacing manual data pulls.</li>
+            <li>Architected and delivered an end-to-end <strong>reporting automation platform</strong> using Python, AWS (Lambda, S3, RDS, ECR), SQL, Google APIs, and Retool, reducing generation time by <strong>95% (60+ min → ~5 min)</strong> while fully automating 350+ monthly reports and reclaiming <strong>3,900+ hours annually</strong>.</li>
+            <li>Migrated the <strong>credit modeling module</strong> (allocation, utilisation, reimbursements) from Redshift to Microsoft Fabric and built Power BI dashboards surfacing credit metrics to the Business Development team.</li>
+            <li>Co-engineered full automation of the <strong>revenue recognition ELT pipeline</strong>, eliminating manual effort and achieving <strong>99.89% data accuracy</strong>, powering a near real-time financial dashboard.</li>
+            <li>Optimized Redshift DWH performance by <strong>20%</strong> through Sort/Dist key redesign, compression tuning, and a self-maintaining pipeline for automated Vacuum/Analyze execution on stale tables.</li>
+            <li>Solely re-architected a monolithic ETL serving <strong>9 countries</strong> into dynamic, country-specific pipelines with segregated schemas, improving data governance, BI dashboards, and regional scalability.</li>
           </ul>
         </div>
+
+        <!-- Techlogix -->
         <div class="exp-card">
           <div class="exp-top">
             <div>
@@ -361,11 +391,10 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
             <span class="exp-tech">Databricks</span><span class="exp-tech">Snowflake</span><span class="exp-tech">Airflow</span><span class="exp-tech">PySpark</span><span class="exp-tech">Docker</span><span class="exp-tech">Azure ADF</span><span class="exp-tech">Power BI</span>
           </div>
           <ul class="exp-highlights">
-            <li>Executed PoCs and optimized ELT pipelines and codebase on <strong>Databricks</strong> for client Blue Cross Blue Shield of Michigan.</li>
-            <li>Developed the core <strong>Snowflake Data Warehouse</strong> and associated ELT pipelines for AdalFi, successfully mapping the end-to-end customer journey, enabling real-time insights and data-driven decision making.</li>
-            <li>Transitioned legacy ETL architecture to <strong>Airflow + PySpark + Docker</strong>, achieving a <strong>40% reduction in processing time</strong> with enhanced scalability.</li>
+            <li>Executed PoCs and optimized ELT pipelines on <strong>Databricks</strong> for Blue Cross Blue Shield of Michigan.</li>
+            <li>Developed the core <strong>Snowflake Data Warehouse</strong> and ELT pipelines for AdalFi, mapping the end-to-end customer journey for real-time insights.</li>
+            <li>Transitioned legacy ETL architecture to <strong>Airflow + PySpark + Docker</strong>, achieving a <strong>40% reduction in processing time</strong>.</li>
             <li>Refactored complex SQL and Python codebases, drastically improving pipeline logic flow, maintainability, and stability.</li>
-            <li>Built <strong>Power BI dashboards</strong> that streamlined KPI tracking and accelerated management decision-making.</li>
           </ul>
         </div>
       </div>
@@ -380,12 +409,11 @@ nav{background:#161b22;border-bottom:1px solid #30363d;padding:12px 0;position:s
             <div class="edu-name"><a href="https://www.nu.edu.pk/" target="_blank" style="color:#e6edf3">FAST – National University of Computer & Emerging Sciences</a></div>
             <div class="edu-deg">Bachelor of Science in Computer Science</div>
             <div class="edu-meta">Graduated April 2023 <span class="gpa-badge">3.57 / 4.00 GPA</span></div>
-            <div class="honor-list">Dean's Honor Certificate in semesters 1, 2, 3, 4, 5 & 8</div>
+            <div class="honor-list">Dean's Honor Certificate in 6 of 8 semesters</div>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
